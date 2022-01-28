@@ -56,7 +56,7 @@ app.post("/users/", async (request, response) => {
 });
 
 //API 2
-app.get("/users/", async (request, response) => {
+app.get("/user/", async (request, response) => {
   const getBooksQuery = `
     SELECT
       *
