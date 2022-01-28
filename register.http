@@ -8,3 +8,8 @@ Content-Type: application/json
     "gender":"male",
     "location":"1-33-1/521107,savaragudem(V),gannavaram(M),krishna(D)"
 }
+
+
+###
+
+GET http://localhost:9254/users/
