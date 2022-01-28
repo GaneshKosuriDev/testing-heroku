@@ -15,6 +15,7 @@ const initializeDBandServer = async () => {
       filename: path.join(__dirname, "register.db"),
       driver: sqlite3.Database,
     });
+    console.log(process.env.PORT);
     app.listen(process.env.PORT || 9254, () => {
       console.log("Server is running on http://localhost:9254");
     });
@@ -54,4 +55,16 @@ app.post("/users/", async (request, response) => {
   }
 });
 
+//API 2
+app.get("/users/", async (request, response) => {
+  const getBooksQuery = `
+    SELECT
+      *
+    FROM
+      users
+    ORDER BY
+      name;`;
+  const booksArray = await db.all(getBooksQuery);
+  response.send(booksArray);
+});
 module.exports = app;
