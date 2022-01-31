@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "register.js",
-  "scripts": {
-    "start": "nodemon register.js"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,9 +12,12 @@
     "date": "^1.0.2",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
-    "node": "^17.4.0",
+    "nodemon": "^2.0.15",
     "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2"
+  },
+  "scripts": {
+    "start": "nodemon register.js"
   },
   "engines": {
     "node": "12.18.3"
